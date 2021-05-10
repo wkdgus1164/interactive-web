@@ -1,0 +1,27 @@
+@charset "UTF-8";
+.box-container {
+  display: flex;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 0, 0.7);
+  border: 2px solid black;
+  transition-duration: 1s;
+  transition-delay: 1s;
+}
+.box:hover {
+  /*
+   * scale : n배로 크기가 커지거나 작아짐.
+   * rotate : n도만큼 회전함.
+   * skew  : n도만큼 비틀어짐.
+   * skewY : n도만큼 Y축으로 비틀어짐.
+   * translate : X, Y축만큼 이동.
+   * transform-origin : 변경의 기준점을 정의.
+  */
+  transform: scale(2) rotate(15deg) skew(30deg) translate(30px, 10px);
+  transform-origin: left top;
+}
+
+/*# sourceMappingURL=transform.css.map */
