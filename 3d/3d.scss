@@ -5,17 +5,53 @@
   align-items: center;
   justify-content: center;
   background: #fff000;
+  perspective: 500px;
+
+  &:hover .card {
+    transform: rotateY(-180deg);
+  }
 }
 
 .card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   width: 100px;
   height: 150px;
   margin: 1em;
-  border-radius: .5em;
-  font-size: 1.5rem;
-  background: red;
-  transform: perspective(500px) rotateY(45deg);
+
+  // 미리 지정해 놓으면 성능에 도움이 된다고 함.
+  transform: rotateY(0deg);
+
+  // 뒤집히는 애니메이션 효과를 위해 1초의 시간을 소요함.
+  transition: 1s;
+
+  // 뒤집었을 때 3d 효과를 내도록.
+  transform-style: preserve-3d;
+  
+  transform-origin: left;
+
+  .card-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: .5em;
+    font-size: 1.5rem;
+
+    // 뒤집었을 때 앞면이 안보이도록 가림.
+    backface-visibility: hidden;
+  }
+
+  .card-side-front {
+    background: white;
+    z-index: 1;
+  }
+
+  .card-side-back {
+    background: red;
+    transform: rotateY(180deg);
+  }
 }
