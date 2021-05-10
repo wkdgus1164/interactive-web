@@ -1,0 +1,38 @@
+@charset "UTF-8";
+.container {
+  display: flex;
+  /* flex-direction
+  * row[기본값]: 가로
+  * column: 세로
+  * [row/column]-reverse: 반대로
+  */
+  flex-direction: row;
+  /* justify-content
+  * flex-start[기본값]: 왼쪽-오른쪽
+  * flex-end: 오른쪽-왼쪽
+  * space-between: 양쪽 정렬
+  * space-around: space-between 좌우 여백
+  */
+  justify-content: center;
+  /* align-items
+  * stretch[기본값]: 끝과 끝으로 늘어남
+  * flex-start: 앞으로 정렬
+  * flex-end: 뒤로 정렬
+  * center: 가운데 정렬
+  */
+  align-items: stretch;
+  height: 80vh;
+  background: gray;
+}
+
+.item {
+  /* flex-grow
+  * flex 아이템의 비율
+  */
+  flex-grow: 1;
+  padding: 2em;
+  border: 3px solid black;
+  background: white;
+}
+
+/*# sourceMappingURL=flexbox.css.map */
