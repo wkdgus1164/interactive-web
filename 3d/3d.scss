@@ -7,51 +7,47 @@
   background: #fff000;
   perspective: 500px;
 
-  &:hover .card {
-    transform: rotateY(-180deg);
+  &:hover .card-side-front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover .card-side-back {
+    transform: rotateY(360deg);
   }
 }
 
-.card {
-  position: relative;
+.card-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
   width: 100px;
   height: 150px;
-  margin: 1em;
+  margin: -75px 0 0 -50px;
+  border-radius: .5em;
+  font-size: 1.5rem;
 
-  // 미리 지정해 놓으면 성능에 도움이 된다고 함.
-  transform: rotateY(0deg);
+  // 크로스 브라우징 대비.
+  // 크로스 브라우징용 코드를 앞에 쓰고 표준 스타일을 마지막에 써야
+  // 아래에서 덮어쓰기를 방지할 수 있다.
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+
+  // 뒤집었을 때 앞면이 안보이도록 가림.
+  backface-visibility: hidden;
 
   // 뒤집히는 애니메이션 효과를 위해 1초의 시간을 소요함.
   transition: 1s;
+}
 
-  // 뒤집었을 때 3d 효과를 내도록.
-  transform-style: preserve-3d;
-  
-  transform-origin: left;
+.card-side-front {
+  background: white;
+  z-index: 1;
+}
 
-  .card-side {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: .5em;
-    font-size: 1.5rem;
-
-    // 뒤집었을 때 앞면이 안보이도록 가림.
-    backface-visibility: hidden;
-  }
-
-  .card-side-front {
-    background: white;
-    z-index: 1;
-  }
-
-  .card-side-back {
-    background: red;
-    transform: rotateY(180deg);
-  }
+.card-side-back {
+  background: red;
+  transform: rotateY(180deg);
 }
