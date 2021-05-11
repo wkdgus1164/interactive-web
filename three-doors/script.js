@@ -2,16 +2,25 @@
   const stageElem = document.querySelector('.stage');
   let currentItem;
 
+  const activate = element => {
+    element.classList.add('door-opened');
+    currentItem = element;
+  }
+
+  const inactivate = element => {
+    element.classList.remove('door-opened');
+  }
+
   const doorHandler = (e) => {
     const targetElem = e.target;
 
-    if (currentItem) currentItem.classList.remove('door-opened');
+    if (currentItem) inactivate(currentItem);
 
     if (targetElem.classList.contains('door-body')) {
-      targetElem.parentNode.classList.add('door-opened');
-      currentItem = targetElem.parentNode;
+      activate(targetElem.parentNode);
     }
   }
 
   stageElem.addEventListener('click', doorHandler);
+  activate(document.querySelector('.door:first-child'));
 })();
