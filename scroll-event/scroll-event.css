@@ -24,7 +24,8 @@ img {
   margin: 20px auto;
   transition: 1s;
 }
-.ilbuni .zsoom {
+
+.zoom {
   transform: scale(2);
 }
 
