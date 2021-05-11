@@ -1,0 +1,30 @@
+img {
+  max-width: 100%;
+}
+
+.content {
+  height: 1000vh;
+  padding: 20%;
+  background-color: yellowgreen;
+}
+
+.output {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 200;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.ilbuni {
+  width: 100px;
+  margin: 20px auto;
+  transition: 1s;
+
+  .zsoom {
+    transform: scale(2);
+  }
+}
