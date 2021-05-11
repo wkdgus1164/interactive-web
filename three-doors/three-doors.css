@@ -42,13 +42,6 @@
   transform-origin: left;
   transition: 0.5s;
 }
-.door:hover .door-body {
-  transform: perspective(800px) rotateY(-110deg);
-  transition: 0.5s;
-}
-.door:hover .ilbuni {
-  transform: translate3d(0, 0, 0);
-}
 .door:nth-child(1) .ilbuni {
   background-image: url("../images/ilbuni_0.png");
 }
@@ -66,6 +59,14 @@
 }
 .door:nth-child(3) .door-body {
   background: rgba(0, 0, 255, 0.7);
+}
+
+.door-opened .door-body {
+  transform: perspective(800px) rotateY(-110deg);
+  transition: 0.5s;
+}
+.door-opened .ilbuni {
+  transform: translate3d(0, 0, 0);
 }
 
 /*# sourceMappingURL=three-doors.css.map */

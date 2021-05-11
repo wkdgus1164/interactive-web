@@ -45,17 +45,6 @@
     transition: .5s;
   }
 
-  &:hover {
-    .door-body {
-      transform: perspective(800px) rotateY(-110deg);
-      transition: .5s;
-    }
-
-    .ilbuni {
-      transform: translate3d(0, 0, 0);
-    }
-  }
-
   &:nth-child(1) .ilbuni {
     background-image: url("../images/ilbuni_0.png");
   }
@@ -78,5 +67,16 @@
 
   &:nth-child(3) .door-body {
     background: rgba(0, 0, 255, .7);
+  }
+}
+
+.door-opened {
+  .door-body {
+    transform: perspective(800px) rotateY(-110deg);
+    transition: .5s;
+  }
+
+  .ilbuni {
+    transform: translate3d(0, 0, 0);
   }
 }
