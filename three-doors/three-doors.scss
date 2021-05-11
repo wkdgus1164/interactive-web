@@ -19,6 +19,7 @@
     width: 100%;
     height: 100%;
     background: black;
+    overflow: hidden;
   }
 
   .ilbuni {
@@ -30,6 +31,8 @@
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;
+    transform: translate3d(100%, 0, 0);
+    transition: .5s .5s;
   }
 
   .door-body {
@@ -38,6 +41,19 @@
     top: 0;
     width: 100%;
     height: 100%;
+    transform-origin: left;
+    transition: .5s;
+  }
+
+  &:hover {
+    .door-body {
+      transform: perspective(800px) rotateY(-110deg);
+      transition: .5s;
+    }
+
+    .ilbuni {
+      transform: translate3d(0, 0, 0);
+    }
   }
 
   &:nth-child(1) .ilbuni {
