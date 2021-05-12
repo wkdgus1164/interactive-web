@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+body {
+  font-family: 'Do Hyeon', sans-serif;
+  -webkit-overflow-scrolling: touch;
+  color: #555;
+  background-color: #fff000;
+}
+
+.world {
+  // 스크롤 시 화면이 내려가면 안되기 때문에 position 을 fixed 로 고정.
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  perspective: 1000px;
+}
+
+.stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.house {
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.wall {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.wall-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wall-title {
+  font-size: 5rem;
+}
