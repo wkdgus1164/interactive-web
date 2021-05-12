@@ -15,13 +15,24 @@ p {
   line-height: 1.6;
 }
 
+strong {
+  font-weight: 900;
+}
+
 a {
   color: #1d1d1f;
   text-decoration: none;
 }
 
+.main-message small {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 1.2rem;
+}
+
 .global-navigation {
   height: 44px;
+  padding: 0 1rem;
 }
 .global-navigation .global-navigation-link {
   display: flex;
@@ -35,6 +46,7 @@ a {
 .local-nav {
   height: 52px;
   border-bottom: 1px solid #ddd;
+  padding: 0 1rem;
 }
 .local-nav .local-nav-links {
   display: flex;
@@ -53,6 +65,117 @@ a {
 .local-nav .local-nav-links .product-name {
   font-size: 1.2rem;
   font-weight: 900;
+}
+
+.scroll-section {
+  padding-top: 50vh;
+}
+.scroll-section#scroll-section-0 h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+.scroll-section#scroll-section-0 .main-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  font-size: 2.5rem;
+}
+.scroll-section#scroll-section-0 .main-message p {
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+}
+.scroll-section#scroll-section-1 .description {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  color: #888;
+}
+.scroll-section#scroll-section-1 .description strong {
+  float: left;
+  margin-right: 0.2em;
+  font-size: 3rem;
+  color: #1d1d1f;
+}
+.scroll-section#scroll-section-2 .main-message {
+  font-size: 3.5rem;
+}
+.scroll-section#scroll-section-2 .main-message p {
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+}
+.scroll-section#scroll-section-2 .main-message small {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 1.2rem;
+}
+.scroll-section#scroll-section-2 .description-message {
+  width: 50%;
+  font-weight: bold;
+}
+.scroll-section#scroll-section-2 .pin {
+  width: 1px;
+  height: 100px;
+  background-color: #1d1d1f;
+}
+.scroll-section#scroll-section-3 .middle-message {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: 2rem;
+  color: #888;
+}
+.scroll-section#scroll-section-3 .middle-message strong {
+  color: #1d1d1f;
+}
+.scroll-section#scroll-section-3 .canvas-caption {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  background-color: darkorange;
+}
+
+@media (min-width: 1024px) {
+  .scroll-section#scroll-section-0 h1 {
+    font-weight: 900;
+    font-size: 9vw;
+  }
+  .scroll-section#scroll-section-0 .main-message {
+    font-size: 4vw;
+  }
+  .scroll-section#scroll-section-1 .description {
+    font-size: 2rem;
+  }
+  .scroll-section#scroll-section-1 .description strong {
+    font-size: 6rem;
+  }
+  .scroll-section#scroll-section-2 .main-message {
+    font-size: 6vw;
+  }
+  .scroll-section#scroll-section-2 .main-message small {
+    font-size: 1.5vw;
+  }
+  .scroll-section#scroll-section-2 .description-message {
+    width: 20%;
+  }
+  .scroll-section#scroll-section-3 .middle-message {
+    font-size: 4vw;
+  }
+  .scroll-section#scroll-section-3 .canvas-caption {
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=apple-site.css.map */

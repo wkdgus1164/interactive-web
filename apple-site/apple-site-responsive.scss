@@ -1,0 +1,48 @@
+@media (min-width: 1024px) {
+  .scroll-section {
+    &#scroll-section-0 {
+      h1 {
+        font-weight: 900;
+        font-size: 9vw;
+      }
+
+      .main-message {
+        font-size: 4vw;
+      }
+    }
+
+    &#scroll-section-1 {
+      .description {
+        font-size: 2rem;
+
+        strong {
+          font-size: 6rem;
+        }
+      }
+    }
+
+    &#scroll-section-2 {
+      .main-message {
+        font-size: 6vw;
+
+        small {
+          font-size: 1.5vw;
+        }
+      }
+
+      .description-message {
+        width: 20%;
+      }
+    }
+
+    &#scroll-section-3 {
+      .middle-message {
+        font-size: 4vw;
+      }
+
+      .canvas-caption {
+        font-size: 2rem;
+      }
+    }
+  }
+}
