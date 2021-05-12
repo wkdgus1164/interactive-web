@@ -5,8 +5,7 @@ body {
   color: #555;
   background-color: #fff000;
 }
-
-.world {
+body .world {
   position: fixed;
   left: 0;
   top: 0;
@@ -14,8 +13,7 @@ body {
   height: 100vh;
   perspective: 1000px;
 }
-
-.stage {
+body .world .stage {
   position: absolute;
   left: 0;
   top: 0;
@@ -23,28 +21,33 @@ body {
   height: 100vh;
   transform-style: preserve-3d;
 }
-
-.house {
+body .world .stage .house {
   width: 100vw;
   height: 100vh;
+  transform: translateZ(-490vw);
   transform-style: preserve-3d;
 }
-
-.wall {
+body .world .stage .house .wall {
   position: absolute;
   width: 100vw;
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.8);
 }
-
-.wall-content {
+body .world .stage .house .wall.wall-left {
+  width: 1000vw;
+  transform: rotateY(90deg) translateZ(-500vw);
+}
+body .world .stage .house .wall.wall-right {
+  width: 1000vw;
+  transform: rotateY(90deg) translateZ(-400vw);
+}
+body .world .stage .house .wall-content {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-
-.wall-title {
+body .world .stage .house .wall-content .wall-title {
   font-size: 5rem;
 }
 
