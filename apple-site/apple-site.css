@@ -86,6 +86,13 @@ a {
   text-align: center;
   line-height: 1.2;
 }
+.scroll-section#scroll-section-0 .main-message.sticky-element {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 .scroll-section#scroll-section-1 .description {
   max-width: 1000px;
   margin: 0 auto;
@@ -112,6 +119,13 @@ a {
   margin-bottom: 0.5em;
   font-size: 1.2rem;
 }
+.scroll-section#scroll-section-2 .main-message.sticky-element {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 .scroll-section#scroll-section-2 .description-message {
   width: 50%;
   font-weight: bold;
@@ -137,6 +151,13 @@ a {
   padding: 0 1rem;
   font-size: 1.2rem;
   color: #888;
+}
+
+#show-scene-0 #scroll-section-0 .sticky-element,
+#show-scene-1 #scroll-section-1 .sticky-element,
+#show-scene-2 #scroll-section-2 .sticky-element,
+#show-scene-3 #scroll-section-3 .sticky-element {
+  display: block;
 }
 
 .footer {

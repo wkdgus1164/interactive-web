@@ -27,7 +27,6 @@ a {
 }
 
 .main-message {
-
   small {
     display: block;
     margin-bottom: .5em;
@@ -98,6 +97,14 @@ a {
         text-align: center;
         line-height: 1.2;
       }
+
+      &.sticky-element {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
     }
   }
 
@@ -132,6 +139,14 @@ a {
         display: block;
         margin-bottom: .5em;
         font-size: 1.2rem;
+      }
+
+      &.sticky-element {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
       }
     }
 
@@ -168,6 +183,13 @@ a {
       color: #888;
     }
   }
+}
+
+#show-scene-0 #scroll-section-0 .sticky-element,
+#show-scene-1 #scroll-section-1 .sticky-element,
+#show-scene-2 #scroll-section-2 .sticky-element,
+#show-scene-3 #scroll-section-3 .sticky-element {
+  display: block;
 }
 
 .footer {
