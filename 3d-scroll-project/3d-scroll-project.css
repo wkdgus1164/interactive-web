@@ -35,11 +35,25 @@ body .world .stage .house .wall {
 }
 body .world .stage .house .wall.wall-left {
   width: 1000vw;
+  background-color: #f8f8f8;
   transform: rotateY(90deg) translateZ(-500vw);
 }
 body .world .stage .house .wall.wall-right {
   width: 1000vw;
+  background-color: #f8f8f8;
   transform: rotateY(90deg) translateZ(-400vw);
+}
+body .world .stage .house .wall.wall-front-a {
+  transform: translateZ(300vw);
+}
+body .world .stage .house .wall.wall-front-b {
+  transform: translateZ(50vw);
+}
+body .world .stage .house .wall.wall-front-c {
+  transform: translateZ(-200vw);
+}
+body .world .stage .house .wall.wall-front-d {
+  transform: translateZ(-500vw);
 }
 body .world .stage .house .wall-content {
   display: flex;
