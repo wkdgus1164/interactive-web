@@ -18,4 +18,8 @@ window.addEventListener('click', clickHandler);
 
 // transitionend : transition 이 끝날 때 실행됨.
 // transitionstart : transition 이 시작될 때 실행됨.
-ballElement.addEventListener('transitionstart', ballHandler);
+// animationend : animation 이 끝날 때 실행됨.
+// animationstart : animation 이 시작될 때 실행됨.
+// animationiteration : animation 이 반복될 때 실행됨.
+ballElement.addEventListener('animationstart', ballHandler);
+ballElement.addEventListener('animationiteration', () => console.log('반복'));

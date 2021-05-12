@@ -1,0 +1,25 @@
+@keyframes ball-animation {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(200px, 200px);
+  }
+}
+
+.ball {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  margin: -15px 0 0 -15px;
+  background-color: red;
+  border-radius: 50%;
+  animation: ball-animation 1s 3 alternate forwards;
+
+  &.end {
+    border: 5px solid dodgerblue;
+  }
+}
