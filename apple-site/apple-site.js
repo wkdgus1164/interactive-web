@@ -1,4 +1,12 @@
 (() => {
+  let yOffset = 0;
+
+  // 현재 스크롤 위치 (yOffset) 보다 이전에 위치한 스크롤 섹션들의 스크롤 높이 값의 합
+  let previewMultipleHeight = 0;
+
+  // 현재 활성화된 씬
+  let currentScene = 0;
+
   const sceneInformation = [
     {
       type: 'sticky',
@@ -46,5 +54,23 @@
   }
 
   window.addEventListener('resize', setSectionHeight);
+
+  function scrollLoop() {
+    previewMultipleHeight = 0;
+    for (let i = 0; i < currentScene; i++) {
+      previewMultipleHeight += sceneInformation[i].scrollHeight;
+    }
+
+    if (yOffset > previewMultipleHeight + sceneInformation[currentScene].scrollHeight) currentScene++;
+    if (yOffset < previewMultipleHeight) {
+      if (currentScene === 0) return;
+      currentScene--;
+    }
+  }
+
+  window.addEventListener('scroll', () => {
+    yOffset = window.pageYOffset;
+    scrollLoop();
+  });
   setSectionHeight();
 })();
